@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { MainServiceService } from 'src/app/backend/main-service.service';
 
 @Component({
   selector: 'app-main',
@@ -7,22 +9,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent {
-  //connection with API 
-  constructor(public api:HttpClient){}
+  constructor(public backend:MainServiceService,private router:Router){}
 
   ngOnInit(){
     //the first called method in component 
     console.log('ngOnInit')
-    this.api.get('https://localhost:44363/api/Users/GetSubscribtions')
-    .subscribe(res=>{
-      //handling for success response
-      console.log('this is a response')
-      console.log(res)
-    },err=>{
-      //handling for error response
-      console.log('this is an error')
-      console.log(err)
-    })
   }
 
   ngAfterViewInit(){
@@ -34,5 +25,10 @@ export class MainComponent {
   ngOnDestroy(){
     console.log('ngOnDestroy')
     //the last method called in component
+  }
+
+
+  NaivageteToLogin(){
+    this.router.navigate(['/signin'])
   }
 }

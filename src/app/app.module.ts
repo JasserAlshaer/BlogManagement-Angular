@@ -17,6 +17,10 @@ import { FooterComponent } from './sharedcomponent/footer/footer.component';
 import { ConfirmDialogComponent } from './sharedcomponent/confirm-dialog/confirm-dialog.component';
 import { AlertComponent } from './sharedcomponent/alert/alert.component';
 import {HttpClientModule} from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { FormsModule, NgForm } from '@angular/forms';
+import { BlogsComponent } from './pages/blogs/blogs.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,12 +36,15 @@ import {HttpClientModule} from '@angular/common/http';
     NavComponent,
     FooterComponent,
     ConfirmDialogComponent,
-    AlertComponent
+    AlertComponent,
+    BlogsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

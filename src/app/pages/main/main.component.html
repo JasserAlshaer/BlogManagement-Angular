@@ -1,1 +1,248 @@
-<p>main works!</p>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+    <!-- Container wrapper -->
+    <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand me-2" href="">
+            <img src="https://img.freepik.com/premium-vector/word-concept-color-geometric-shapes-blog_205544-12899.jpg"
+                height="50" width="90" alt="MDB Logo" loading="lazy" style="margin-top: -1px;" />
+        </a>
+
+        <!-- Toggle button -->
+        <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarButtonsExample"
+            aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarButtonsExample">
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/create-blog">Create Blog</a>
+                </li>
+            </ul>
+            <!-- Left links -->
+
+            <div class="d-flex align-items-center">
+
+                <button data-mdb-ripple-init type="button" class="btn btn-primary me-3" (click)="NaivageteToLogin()">
+                    Login
+                </button>
+                <!--<a data-mdb-ripple-init type="button" class="btn btn-primary me-3" routerLink="/signin">
+                    Login
+                </a>-->
+            </div>
+        </div>
+        <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+
+<br>
+<br>
+<carousel style="height: 400px!important;">
+    <slide>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7y7mnBH3ZTVj_NAkPdr66dsad1mAJ9PoSxA&s"
+            alt="first slide" style="display: block; width: 100%;height: 400px!important;">
+        <div class="carousel-caption d-none d-md-block">
+            <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+    </slide>
+    <slide>
+        <img src="https://archive.smashing.media/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/1e1ac504-4c04-4d77-8765-4d8177464100/how-to-make-cartoons-in-illustrator-final.jpg"
+            alt="second slide" style="height: 400px!important;display: block; width: 100%;">
+        <div class="carousel-caption d-none d-md-block">
+            <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </slide>
+    <slide>
+        <img src="https://illustratorhow.com/wp-content/uploads/tablets-for-illustrator-2.png" alt="third slide"
+            style="display: block; width: 100%;height: 400px!important;">
+        <div class="carousel-caption d-none d-md-block">
+            <h3>Third slide label</h3>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+    </slide>
+</carousel>
+<br>
+<br>
+<!-- About 1 - Bootstrap Brain Component -->
+<section class="py-3 py-md-5">
+    <div class="container">
+        <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+            <div class="col-12 col-lg-6 col-xl-5">
+                <img class="img-fluid rounded" loading="lazy"
+                    src="https://media.istockphoto.com/id/1286378180/vector/website-information-concept.jpg?s=612x612&w=0&k=20&c=6v9Hcbp0zp5itIPIywobPQF13YsHIQ4j_srF5VbQusY="
+                    alt="About 1">
+            </div>
+            <div class="col-12 col-lg-6 col-xl-7">
+                <div class="row justify-content-xl-center">
+                    <div class="col-12 col-xl-11">
+                        <h2 class="mb-3">Who Are We?</h2>
+                        <p class="lead fs-4 text-secondary mb-3">We help people to build incredible brands and superior
+                            products. Our perspective is to furnish outstanding captivating services.</p>
+                        <p class="mb-5">We are a fast-growing company, but we have never lost sight of our core values.
+                            We believe in collaboration, innovation, and customer satisfaction. We are always looking
+                            for new ways to improve our products and services.</p>
+                        <div class="row gy-4 gy-md-0 gx-xxl-5X">
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex">
+                                    <div class="me-4 text-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h2 class="h4 mb-3">Versatile Brand</h2>
+                                        <p class="text-secondary mb-0">We are crafting a digital method that subsists
+                                            life across all mediums.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex">
+                                    <div class="me-4 text-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h2 class="h4 mb-3">Digital Agency</h2>
+                                        <p class="text-secondary mb-0">We believe in innovation by merging primary with
+                                            elaborate ideas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h1>Choose the plan that fits for your team</h1>
+    <p>
+        Deploy your sites to global infrastructure in seconds. No credit card
+        required
+    </p>
+
+    <div class="pricing">
+        <div class="plan">
+            <h2>Dev</h2>
+            <div class="price">FREE</div>
+            <ul class="features">
+                <li><i class="fas fa-check-circle"></i> Unlimited Websites</li>
+                <li><i class="fas fa-check-circle"></i> 1 User</li>
+                <li><i class="fas fa-check-circle"></i> 100MB Space/website</li>
+                <li><i class="fas fa-check-circle"></i> Continuous deployment</li>
+                <li><i class="fas fa-times-circle"></i> No priority support</li>
+            </ul>
+            <button>Signup</button>
+        </div>
+        <div class="plan popular">
+            <span>Most Popular</span>
+            <h2>Pro</h2>
+            <div class="price">$10/month</div>
+            <ul class="features">
+                <li><i class="fas fa-check-circle"></i> Unlimited Websites</li>
+                <li><i class="fas fa-check-circle"></i> 5 Users</li>
+                <li><i class="fas fa-check-circle"></i> 512MB Space/website</li>
+                <li><i class="fas fa-check-circle"></i> Continuous deployment</li>
+                <li><i class="fas fa-check-circle"></i> Email Support</li>
+            </ul>
+            <button>Buy Now</button>
+        </div>
+        <div class="plan">
+            <h2>Enterprise</h2>
+            <div class="price">Custom Pricing</div>
+            <ul class="features">
+                <li><i class="fas fa-check-circle"></i> Unlimited Websites</li>
+                <li><i class="fas fa-check-circle"></i> Unlimited Users</li>
+                <li><i class="fas fa-check-circle"></i> Unlimited Space/website</li>
+                <li><i class="fas fa-check-circle"></i> Continuous deployment</li>
+                <li><i class="fas fa-check-circle"></i> 24/7 Email support</li>
+            </ul>
+            <button>Contact Us</button>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<section class="articles">
+    <article>
+      <div class="article-wrapper">
+        <figure>
+          <img src="https://picsum.photos/id/1011/800/450" alt="" />
+        </figure>
+        <div class="article-body">
+          <h2>This is some title</h2>
+          <p>
+            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+          </p>
+          <a href="#" class="read-more">
+            Read more <span class="sr-only">about this is some title</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </article>
+    <article>
+  
+      <div class="article-wrapper">
+        <figure>
+          <img src="https://picsum.photos/id/1005/800/450" alt="" />
+        </figure>
+        <div class="article-body">
+          <h2>This is some title</h2>
+          <p>
+            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+          </p>
+          <a href="#" class="read-more">
+            Read more <span class="sr-only">about this is some title</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </article>
+    <article>
+  
+      <div class="article-wrapper">
+        <figure>
+          <img src="https://picsum.photos/id/103/800/450" alt="" />
+        </figure>
+        <div class="article-body">
+          <h2>This is some title</h2>
+          <p>
+            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+          </p>
+          <a href="#" class="read-more">
+            Read more <span class="sr-only">about this is some title</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </article>
+</section>

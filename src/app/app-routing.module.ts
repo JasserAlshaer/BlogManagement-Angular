@@ -9,11 +9,16 @@ import { ResetpasswordComponent } from './pages/resetpassword/resetpassword.comp
 import { SigninComponent } from './pages/signin/signin.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { BlogDetailsComponent } from './pages/blog-details/blog-details.component';
+import { BlogsComponent } from './pages/blogs/blogs.component';
 
 const routes: Routes = [
   {
     path:'',//Main Page
     component:MainComponent
+  },
+  {
+    path:'blogs',
+    component:BlogsComponent
   },
   {
     path:'details',
