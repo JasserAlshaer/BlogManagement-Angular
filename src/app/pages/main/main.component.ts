@@ -28,7 +28,5 @@ export class MainComponent {
   }
 
 
-  NaivageteToLogin(){
-    this.router.navigate(['/signin'])
-  }
+
 }

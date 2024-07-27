@@ -21,6 +21,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { FormsModule, NgForm } from '@angular/forms';
 import { BlogsComponent } from './pages/blogs/blogs.component';
+import { MainNewComponent } from './pages/main-new/main-new.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatTooltipModule} from '@angular/material/tooltip';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,14 +42,19 @@ import { BlogsComponent } from './pages/blogs/blogs.component';
     FooterComponent,
     ConfirmDialogComponent,
     AlertComponent,
-    BlogsComponent
+    BlogsComponent,
+    MainNewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

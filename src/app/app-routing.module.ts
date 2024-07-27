@@ -10,6 +10,7 @@ import { SigninComponent } from './pages/signin/signin.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { BlogDetailsComponent } from './pages/blog-details/blog-details.component';
 import { BlogsComponent } from './pages/blogs/blogs.component';
+import { MainNewComponent } from './pages/main-new/main-new.component';
 
 const routes: Routes = [
   {
