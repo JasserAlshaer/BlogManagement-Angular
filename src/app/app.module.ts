@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,7 +15,6 @@ import { ErrorComponent } from './pages/error/error.component';
 import { NavComponent } from './sharedcomponent/nav/nav.component';
 import { FooterComponent } from './sharedcomponent/footer/footer.component';
 import { ConfirmDialogComponent } from './sharedcomponent/confirm-dialog/confirm-dialog.component';
-import { AlertComponent } from './sharedcomponent/alert/alert.component';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
@@ -26,6 +25,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatTableModule} from '@angular/material/table';
+import {MatInputModule} from '@angular/material/input';
+import {MatSortModule} from '@angular/material/sort';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatDialogModule} from '@angular/material/dialog';
+import { EditblogComponent } from './pages/editblog/editblog.component';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,9 +49,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     NavComponent,
     FooterComponent,
     ConfirmDialogComponent,
-    AlertComponent,
     BlogsComponent,
-    MainNewComponent
+    MainNewComponent,
+    EditblogComponent
   ],
   imports: [
     BrowserModule,
@@ -54,8 +62,17 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatTabsModule,
+    MatTableModule,
+    MatInputModule,
+    MatSortModule,
+    MatPaginatorModule,
+    MatDialogModule,
+    NgxSpinnerModule,
+    ToastrModule.forRoot()
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })

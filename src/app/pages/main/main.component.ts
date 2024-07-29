@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { ToastrService } from 'ngx-toastr';
 import { MainServiceService } from 'src/app/backend/main-service.service';
 
 @Component({
@@ -9,11 +11,19 @@ import { MainServiceService } from 'src/app/backend/main-service.service';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent {
-  constructor(public backend:MainServiceService,private router:Router){}
+  constructor(public backend:MainServiceService,private router:Router,
+    public spinner:NgxSpinnerService,
+    public toastr:ToastrService
+  ){}
 
   ngOnInit(){
     //the first called method in component 
     console.log('ngOnInit')
+    //this.spinner.show()
+    this.toastr.success('Hello world!', 'Toastr fun!');
+    this.toastr.error('Hello world!', 'Toastr fun!');
+    this.toastr.warning('Hello world!', 'Toastr fun!');
+    this.toastr.info('Hello world!', 'Toastr fun!');
   }
 
   ngAfterViewInit(){
