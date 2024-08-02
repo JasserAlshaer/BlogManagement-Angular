@@ -6,6 +6,7 @@ import {MatSort} from '@angular/material/sort';
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 import { ConfirmDialogComponent } from 'src/app/sharedcomponent/confirm-dialog/confirm-dialog.component';
 import { ConfirmDialogData } from 'src/app/dtos/confirmDialog/conifrmdialog';
+import { MainServiceService } from 'src/app/backend/main-service.service';
 @Component({
   selector: 'app-manage-blog-admin',
   templateUrl: './manage-blog-admin.component.html',
@@ -36,7 +37,7 @@ export class ManageBlogAdminComponent {
   @ViewChild(MatPaginator) paginator: MatPaginator = new MatPaginator(new MatPaginatorIntl(), ChangeDetectorRef.prototype);
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(public dialog: MatDialog){
+  constructor(public dialog: MatDialog,public backend:MainServiceService){
     this.dataSource = new MatTableDataSource()
     this.sort = new MatSort()
   }

@@ -22,7 +22,7 @@ const routes: Routes = [
     component:BlogsComponent
   },
   {
-    path:'details',
+    path:'details/:blogId',
     component:BlogDetailsComponent
   },
   {

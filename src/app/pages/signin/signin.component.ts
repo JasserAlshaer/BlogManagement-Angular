@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { MainServiceService } from 'src/app/backend/main-service.service';
 
 @Component({
   selector: 'app-signin',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent {
-  
+  constructor(public router:Router,public backend:MainServiceService){
+    localStorage.setItem('isLoggedIn','true')
+  }
 }

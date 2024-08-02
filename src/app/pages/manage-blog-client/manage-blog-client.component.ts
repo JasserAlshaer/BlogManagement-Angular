@@ -7,6 +7,7 @@ import { ConfirmDialogData } from 'src/app/dtos/confirmDialog/conifrmdialog';
 import { ConfirmDialogComponent } from 'src/app/sharedcomponent/confirm-dialog/confirm-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { EditblogComponent } from '../editblog/editblog.component';
+import { MainServiceService } from 'src/app/backend/main-service.service';
 @Component({
   selector: 'app-manage-blog-client',
   templateUrl: './manage-blog-client.component.html',
@@ -37,7 +38,7 @@ export class ManageBlogClientComponent {
   @ViewChild(MatPaginator) paginator: MatPaginator = new MatPaginator(new MatPaginatorIntl(), ChangeDetectorRef.prototype);
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(public dialog: MatDialog){
+  constructor(public dialog: MatDialog,public backend:MainServiceService){
     this.dataSource = new MatTableDataSource()
     this.sort = new MatSort()
   }

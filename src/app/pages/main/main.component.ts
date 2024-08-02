@@ -18,12 +18,7 @@ export class MainComponent {
 
   ngOnInit(){
     //the first called method in component 
-    console.log('ngOnInit')
-    //this.spinner.show()
-    this.toastr.success('Hello world!', 'Toastr fun!');
-    this.toastr.error('Hello world!', 'Toastr fun!');
-    this.toastr.warning('Hello world!', 'Toastr fun!');
-    this.toastr.info('Hello world!', 'Toastr fun!');
+    
   }
 
   ngAfterViewInit(){

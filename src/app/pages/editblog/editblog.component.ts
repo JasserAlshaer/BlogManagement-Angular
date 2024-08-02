@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MainServiceService } from 'src/app/backend/main-service.service';
 import { BlogDTO } from 'src/app/dtos/blogs/blogDto';
 
 @Component({
@@ -9,6 +10,7 @@ import { BlogDTO } from 'src/app/dtos/blogs/blogDto';
 })
 export class EditblogComponent {
   constructor(public dialogRef: MatDialogRef<EditblogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: BlogDTO
+    @Inject(MAT_DIALOG_DATA) public data: BlogDTO,
+    public backend:MainServiceService
   ) {}
 }

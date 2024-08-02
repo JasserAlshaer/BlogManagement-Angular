@@ -7,8 +7,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent {
+  IsloggedIn :boolean = false;
+  IsloggedInAsAdmin :boolean = false;
   constructor(public router:Router){}
   NaivageteToLogin(){
     this.router.navigate(['/signin'])
+  }
+  NaivageteToClientDashboard(){
+    this.router.navigate(['/manage-blog-client'])
+  }
+  NaivageteToAdminDashboard(){
+    this.router.navigate(['/manage-blog-admin'])
   }
 }

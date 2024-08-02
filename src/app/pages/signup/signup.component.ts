@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MainServiceService } from 'src/app/backend/main-service.service';
 
 @Component({
   selector: 'app-signup',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-
+  constructor(public backend:MainServiceService){}
 }
