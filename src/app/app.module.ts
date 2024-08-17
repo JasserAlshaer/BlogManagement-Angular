@@ -34,6 +34,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { EditblogComponent } from './pages/editblog/editblog.component';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { ToastrModule } from 'ngx-toastr';
+import { TestComponent } from 'src/test/test.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,8 @@ import { ToastrModule } from 'ngx-toastr';
     ConfirmDialogComponent,
     BlogsComponent,
     MainNewComponent,
-    EditblogComponent
+    EditblogComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +72,8 @@ import { ToastrModule } from 'ngx-toastr';
     MatPaginatorModule,
     MatDialogModule,
     NgxSpinnerModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    FormsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

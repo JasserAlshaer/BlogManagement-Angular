@@ -2,15 +2,16 @@
     <span>My Blogs</span>
     <span class="example-spacer"></span>
     <button mat-icon-button class="example-icon favorite-icon" matTooltip="Back To Home"
-        aria-label="Example icon-button with heart icon">
+        aria-label="Example icon-button with heart icon" (click)="backToHome()">
         <mat-icon>home</mat-icon>
     </button>
     <button mat-icon-button class="example-icon" matTooltip="Create New Blog"
-        aria-label="Example icon-button with share icon">
+        aria-label="Example icon-button with share icon" (click)="CreateNewBlog()">
         <mat-icon>note_add</mat-icon>
     </button>
     <button mat-icon-button matTooltip="Logout" class="example-icon"
-        aria-label="Example icon-button with share icon">
+        aria-label="Example icon-button with share icon"
+        (click)="LogoutFuncationaity()">
         <mat-icon>error</mat-icon>
     </button>
 
@@ -71,7 +72,7 @@
       <!-- date Column -->
       <ng-container matColumnDef="date">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
-        <td mat-cell *matCellDef="let row"> {{row.date}} </td>
+        <td mat-cell *matCellDef="let row"> {{row.date|date:'dd/MM/yyyy'}} </td>
       </ng-container>
   
   
@@ -96,7 +97,7 @@
               </button>
               <button mat-icon-button color="warn" aria-label="Example icon button with a menu icon"
               [matTooltip]="'Delete'"
-              (click)="DeleteBlog()">
+              (click)="DeleteBlog(row.id)">
                 <mat-icon>delete_sweep</mat-icon>
               </button>
             </div>

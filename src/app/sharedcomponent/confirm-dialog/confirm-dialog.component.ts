@@ -11,4 +11,12 @@ export class ConfirmDialogComponent {
   constructor(public dialogRef: MatDialogRef<ConfirmDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: ConfirmDialogData
   ) {}
+
+  ClickNo(){
+    this.dialogRef.close(false)
+  }
+  ClickYes(){
+    this.dialogRef.close(true)
+  }
 }
+

@@ -97,104 +97,29 @@
     </p>
 
     <div class="pricing">
-        <div class="plan">
-            <h2>Dev</h2>
-            <div class="price">FREE</div>
+        <div class="plan" *ngFor="let item of subsucribtions" >
+            <h2>{{item.name}}</h2>
+            <div class="price">{{item.price}}</div>
             <ul class="features">
-                <li><i class="fas fa-check-circle"></i> Unlimited Websites</li>
-                <li><i class="fas fa-check-circle"></i> 1 User</li>
-                <li><i class="fas fa-check-circle"></i> 100MB Space/website</li>
-                <li><i class="fas fa-check-circle"></i> Continuous deployment</li>
-                <li><i class="fas fa-times-circle"></i> No priority support</li>
+                <li><i class="fas fa-check-circle"></i> Duration : {{item.durationInDay}}</li>
             </ul>
-            <button>Signup</button>
-        </div>
-        <div class="plan popular">
-            <span>Most Popular</span>
-            <h2>Pro</h2>
-            <div class="price">$10/month</div>
-            <ul class="features">
-                <li><i class="fas fa-check-circle"></i> Unlimited Websites</li>
-                <li><i class="fas fa-check-circle"></i> 5 Users</li>
-                <li><i class="fas fa-check-circle"></i> 512MB Space/website</li>
-                <li><i class="fas fa-check-circle"></i> Continuous deployment</li>
-                <li><i class="fas fa-check-circle"></i> Email Support</li>
-            </ul>
-            <button>Buy Now</button>
-        </div>
-        <div class="plan">
-            <h2>Enterprise</h2>
-            <div class="price">Custom Pricing</div>
-            <ul class="features">
-                <li><i class="fas fa-check-circle"></i> Unlimited Websites</li>
-                <li><i class="fas fa-check-circle"></i> Unlimited Users</li>
-                <li><i class="fas fa-check-circle"></i> Unlimited Space/website</li>
-                <li><i class="fas fa-check-circle"></i> Continuous deployment</li>
-                <li><i class="fas fa-check-circle"></i> 24/7 Email support</li>
-            </ul>
-            <button>Contact Us</button>
+            <button>Explore More</button>
         </div>
     </div>
 </section>
 <br>
 <br>
 <section class="articles">
-    <article>
+    <article *ngFor="let item of myMainBlogs">
       <div class="article-wrapper">
         <figure>
-          <img src="https://picsum.photos/id/1011/800/450" alt="" />
+          <img [src]="item.image" alt="" />
         </figure>
         <div class="article-body">
-          <h2>This is some title</h2>
+          <h2>{{item.title}}</h2>
           <p>
-            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+            {{item.author}}
           </p>
-          <a href="#" class="read-more">
-            Read more <span class="sr-only">about this is some title</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article>
-  
-      <div class="article-wrapper">
-        <figure>
-          <img src="https://picsum.photos/id/1005/800/450" alt="" />
-        </figure>
-        <div class="article-body">
-          <h2>This is some title</h2>
-          <p>
-            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-          </p>
-          <a href="#" class="read-more">
-            Read more <span class="sr-only">about this is some title</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </article>
-    <article>
-  
-      <div class="article-wrapper">
-        <figure>
-          <img src="https://picsum.photos/id/103/800/450" alt="" />
-        </figure>
-        <div class="article-body">
-          <h2>This is some title</h2>
-          <p>
-            Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-          </p>
-          <a href="#" class="read-more">
-            Read more <span class="sr-only">about this is some title</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-          </a>
         </div>
       </div>
     </article>

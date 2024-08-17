@@ -10,6 +10,19 @@ export class NavComponent {
   IsloggedIn :boolean = false;
   IsloggedInAsAdmin :boolean = false;
   constructor(public router:Router){}
+  ngOnInit(){
+    let userId = localStorage.getItem('userId')
+    let token = localStorage.getItem('token')
+    if(userId != null && token!= null){
+      if(userId == 'none' && token =='none'){
+        this.IsloggedInAsAdmin= true;
+        this.IsloggedIn=true;
+      }else{
+        this.IsloggedInAsAdmin= false;
+        this.IsloggedIn=true;
+      }
+    }
+  }
   NaivageteToLogin(){
     this.router.navigate(['/signin'])
   }
